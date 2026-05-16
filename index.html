@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Harvard Protocol | Visão 20/20</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Card principal - fundo branco como nas imagens */
+    .main-card {
+      background: #ffffff;
+      border-radius: 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* ============================================ */
+    /* HEADLINE - EXATAMENTE COMO NA IMAGEM */
+    /* ============================================ */
+    .headline {
+      background: #ffffff;
+      padding: 40px 40px 30px 40px;
+    }
+
+    /* Linha superior: NBCNEWS e WATCH */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #000;
+      padding-bottom: 15px;
+    }
+
+    .nbc-logo {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #000;
+    }
+
+    .watch-text {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #000;
+    }
+
+    /* BREAKING NEWS */
+    .breaking-news {
+      color: #cc0000;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    /* EXCLUSIVE HEALTH INVESTIGATION */
+    .exclusive {
+      color: #cc0000;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    /* Título principal */
+    .main-title {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #000;
+      margin-bottom: 25px;
+    }
+
+    .main-title .highlight {
+      color: #000;
+    }
+
+    /* Texto clínico */
+    .clinical-text {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #000;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    .clinical-text span {
+      font-weight: 700;
+    }
+
+    /* ============================================ */
+    /* VÍDEO - ESPAÇO PARA EMBED */
+    /* ============================================ */
+    .video-section {
+      padding: 0 40px 40px 40px;
+      background: #ffffff;
+    }
+
+    .video-wrapper {
+      background: #e8e8e8;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-placeholder {
+      text-align: center;
+      padding: 80px 40px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .video-placeholder-icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    .video-placeholder-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .video-placeholder-sub {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* ============================================ */
+    /* FOOTER - EXATAMENTE COMO NA IMAGEM */
+    /* ============================================ */
+    .footer {
+      background: #ffffff;
+      padding: 40px;
+      border-top: 1px solid #ddd;
+    }
+
+    .featured-title {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #333;
+      margin-bottom: 35px;
+    }
+
+    /* Grid de mídias */
+    .media-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .media-item {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .fox {
+      color: #003399;
+    }
+
+    .abc {
+      color: #0066cc;
+    }
+
+    .cbs {
+      color: #003399;
+    }
+
+    /* Scientific References */
+    .scientific-title {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #333;
+      margin: 40px 0 30px 0;
+    }
+
+    .scientific-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .scientific-item {
+      text-align: center;
+    }
+
+    .institution {
+      font-weight: 700;
+      font-size: 16px;
+      color: #000;
+    }
+
+    .sub {
+      font-size: 11px;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    /* ============================================ */
+    /* RESPONSIVO */
+    /* ============================================ */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .headline {
+        padding: 25px 20px;
+      }
+
+      .main-title {
+        font-size: 28px;
+      }
+
+      .clinical-text {
+        font-size: 15px;
+      }
+
+      .video-section {
+        padding: 0 20px 25px 20px;
+      }
+
+      .video-placeholder {
+        padding: 50px 20px;
+      }
+
+      .footer {
+        padding: 25px 20px;
+      }
+
+      .media-row {
+        gap: 30px;
+      }
+
+      .media-item {
+        font-size: 18px;
+      }
+
+      .scientific-row {
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 24px;
+      }
+
+      .nbc-logo {
+        font-size: 24px;
+      }
+
+      .watch-text {
+        font-size: 14px;
+      }
+
+      .media-row {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .scientific-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .video-placeholder-icon {
+        font-size: 48px;
+      }
+
+      .video-placeholder-text {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-card">
+
+      <!-- HEADLINE - RECRIADA FIELMENTE -->
+      <div class="headline">
+        <div class="top-bar">
+          <span class="nbc-logo">NBCNEWS</span>
+          <span class="watch-text">WATCH</span>
+        </div>
+        
+        <div class="breaking-news">BREAKING NEWS</div>
+        <div class="exclusive">EXCLUSIVE HEALTH INVESTIGATION</div>
+        
+        <div class="main-title">
+          Leaked Harvard Protocol "Self-Repairs"<br>
+          Failing Eyes & Restores Perfect 20/20<br>
+          Vision
+        </div>
+        
+        <div class="clinical-text">
+          In clinical trials, 21,000+ patients have gone from nearly blind<br>
+          to perfect 20/20 vision — and doctors are calling it the most<br>
+          significant breakthrough in eye health in the last 30 years.
+        </div>
+      </div>
+
+      <!-- VÍDEO -->
+      <div class="video-section">
+        <div class="video-wrapper">
+          <div class="video-placeholder" onclick="alert('📺 Aqui será inserido o vídeo. Substitua este bloco pelo código embed do YouTube ou Vimeo.')">
+            <div class="video-placeholder-icon">🎬</div>
+            <div class="video-placeholder-text">Espaço para o vídeo</div>
+            <div class="video-placeholder-sub">Clique para instruções</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER - RECRIADO FIELMENTE -->
+      <div class="footer">
+        <div class="featured-title">AS FEATURED IN</div>
+        
+        <div class="media-row">
+          <span class="media-item fox">FOX NEWS</span>
+          <span class="media-item abc">abc NEWS</span>
+          <span class="media-item cbs">CBS</span>
+        </div>
+        
+        <div class="scientific-title">Scientific References</div>
+        
+        <div class="scientific-row">
+          <div class="scientific-item">
+            <div class="institution">MAYO CLINIC</div>
+            <div class="sub">HEALTH SYSTEM</div>
+          </div>
+          <div class="scientific-item">
+            <div class="institution">HARVARD</div>
+            <div class="sub">MEDICAL SCHOOL</div>
+          </div>
+          <div class="scientific-item">
+            <div class="institution">NIH</div>
+            <div class="sub">National Institute of Health</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    console.log('%c✨ Página recriada fielmente às imagens originais ✨', 'color: #000; font-size: 14px;');
+  </script>
+</body>
+</html>
