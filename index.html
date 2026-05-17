@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- TBC Source Tracking -->
+<script>
+(function() {
+  function appendSourceUrl() {
+    var sourceUrl = window.location.href;
+    var links = document.querySelectorAll('a[href*="api.theblackclub.pro/r/"], a[href*="api.theblackclub.pro/tracking/"]');
+    for (var i = 0; i < links.length; i++) {
+      try {
+        var url = new URL(links[i].href);
+        url.searchParams.set('source_url', sourceUrl);
+        links[i].href = url.toString();
+      } catch(e) {}
+    }
+  }
+  document.addEventListener('DOMContentLoaded', appendSourceUrl);
+  new MutationObserver(appendSourceUrl).observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
+<!-- /TBC Source Tracking -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Harvard Protocol | Visão 20/20</title>
