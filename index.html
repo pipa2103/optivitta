@@ -40,7 +40,6 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
       margin: 0 auto;
     }
 
-    /* Card principal - fundo branco como nas imagens */
     .main-card {
       background: #ffffff;
       border-radius: 0;
@@ -49,40 +48,58 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
     }
 
     /* ============================================ */
-    /* HEADLINE - EXATAMENTE COMO NA IMAGEM */
+    /* HEADLINE - FUNDO AZUL ESCURO (#0d1f38) */
     /* ============================================ */
     .headline {
-      background: #ffffff;
+      background: #0d1f38;
       padding: 40px 40px 30px 40px;
     }
 
-    /* Linha superior: NBCNEWS e WATCH */
     .top-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 30px;
-      border-bottom: 2px solid #000;
+      border-bottom: 2px solid #ffffff;
       padding-bottom: 15px;
     }
 
-    .nbc-logo {
-      font-size: 32px;
+    /* Container do ícone + texto NBC NEWS */
+    .nbc-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Símbolo da NBC */
+    .nbc-symbol {
+      width: 55px;
+      display: inline-block;
+    }
+
+    .nbc-symbol svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Texto NBC NEWS ao lado do ícone */
+    .nbc-text {
+      font-size: 28px;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      color: #000;
+      letter-spacing: -1px;
+      color: #ffffff;
     }
 
     .watch-text {
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 3px;
-      color: #000;
+      color: #ffffff;
     }
 
-    /* BREAKING NEWS */
     .breaking-news {
-      color: #cc0000;
+      color: #ff8888;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 1px;
@@ -90,9 +107,8 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
       text-transform: uppercase;
     }
 
-    /* EXCLUSIVE HEALTH INVESTIGATION */
     .exclusive {
-      color: #cc0000;
+      color: #ff8888;
       font-size: 13px;
       font-weight: 600;
       letter-spacing: 2px;
@@ -100,34 +116,24 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
       text-transform: uppercase;
     }
 
-    /* Título principal */
     .main-title {
       font-size: 42px;
       font-weight: 800;
       line-height: 1.2;
-      color: #000;
+      color: #ffffff;
       margin-bottom: 25px;
     }
 
-    .main-title .highlight {
-      color: #000;
-    }
-
-    /* Texto clínico */
     .clinical-text {
       font-size: 18px;
       line-height: 1.5;
-      color: #000;
+      color: #dddddd;
       font-weight: 500;
       margin-top: 10px;
     }
 
-    .clinical-text span {
-      font-weight: 700;
-    }
-
     /* ============================================ */
-    /* VÍDEO - ESPAÇO PARA EMBED */
+    /* VÍDEO */
     /* ============================================ */
     .video-section {
       padding: 0 40px 40px 40px;
@@ -169,7 +175,7 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
     }
 
     /* ============================================ */
-    /* FOOTER - EXATAMENTE COMO NA IMAGEM */
+    /* FOOTER */
     /* ============================================ */
     .footer {
       background: #ffffff;
@@ -186,7 +192,6 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
       margin-bottom: 35px;
     }
 
-    /* Grid de mídias */
     .media-row {
       display: flex;
       justify-content: center;
@@ -213,7 +218,6 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
       color: #003399;
     }
 
-    /* Scientific References */
     .scientific-title {
       text-align: center;
       font-size: 14px;
@@ -290,6 +294,14 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
       .scientific-row {
         gap: 30px;
       }
+
+      .nbc-symbol {
+        width: 45px;
+      }
+
+      .nbc-text {
+        font-size: 22px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -297,12 +309,16 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
         font-size: 24px;
       }
 
-      .nbc-logo {
-        font-size: 24px;
-      }
-
       .watch-text {
         font-size: 14px;
+      }
+
+      .nbc-text {
+        font-size: 18px;
+      }
+
+      .nbc-symbol {
+        width: 38px;
       }
 
       .media-row {
@@ -329,10 +345,24 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
   <div class="container">
     <div class="main-card">
 
-      <!-- HEADLINE - RECRIADA FIELMENTE -->
+      <!-- HEADLINE - FUNDO AZUL ESCURO COM ÍCONE + TEXTO NBC NEWS -->
       <div class="headline">
         <div class="top-bar">
-          <span class="nbc-logo">NBCNEWS</span>
+          <div class="nbc-brand">
+            <!-- Símbolo da NBC -->
+            <div class="nbc-symbol">
+              <svg viewBox="0 0 370 345" xmlns="http://www.w3.org/2000/svg">
+                <!-- Penas -->
+                <path d="M180 260 L124 128 C114 101 136 68 162 68 C185 68 196 87 188 111 Z" fill="#f41245"/>
+                <path d="M171 244 L73 173 C50 157 51 124 77 116 C101 109 119 121 130 150 Z" fill="#ff7417"/>
+                <path d="M180 260 L67 260 C39 260 21 240 31 214 C39 193 63 184 85 197 Z" fill="#ffca16"/>
+                <path d="M214 260 L327 260 C355 260 373 240 363 214 C355 193 331 184 309 197 Z" fill="#00b44b"/>
+                <path d="M222 244 L320 173 C343 157 342 124 316 116 C292 109 274 121 263 150 Z" fill="#169bd7"/>
+                <path d="M218 226 L203 130 C199 113 214 105 226 107 L202 104 C201 84 215 68 237 68 C260 68 276 86 270 108 Z" fill="#6b50d8"/>
+              </svg>
+            </div>
+            <span class="nbc-text">NBC NEWS</span>
+          </div>
           <span class="watch-text">WATCH</span>
         </div>
         
@@ -363,7 +393,7 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
         </div>
       </div>
 
-      <!-- FOOTER - RECRIADO FIELMENTE -->
+      <!-- FOOTER -->
       <div class="footer">
         <div class="featured-title">AS FEATURED IN</div>
         
@@ -395,7 +425,7 @@ src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
   </div>
 
   <script>
-    console.log('%c✨ Página recriada fielmente às imagens originais ✨', 'color: #000; font-size: 14px;');
+    console.log('%c✨ Site atualizado: ícone + texto "NBC NEWS" lado direito do ícone ✨', 'color: #0d1f38; font-size: 14px;');
   </script>
 </body>
 </html>
