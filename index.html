@@ -1,117 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
-  <!-- TBC Source Tracking -->
-  <script>
-  (function() {
-    function appendSourceUrl() {
-      var sourceUrl = window.location.href;
-      var links = document.querySelectorAll('a[href*="api.theblackclub.pro/r/"], a[href*="api.theblackclub.pro/tracking/"]');
-      for (var i = 0; i < links.length; i++) {
-        try {
-          var url = new URL(links[i].href);
-          url.searchParams.set('source_url', sourceUrl);
-          links[i].href = url.toString();
-        } catch(e) {}
-      }
-    }
-    document.addEventListener('DOMContentLoaded', appendSourceUrl);
-    new MutationObserver(appendSourceUrl).observe(document.documentElement, { childList: true, subtree: true });
-  })();
-  </script>
-  <!-- /TBC Source Tracking -->
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Harvard Protocol | Visão 20/20</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Código de velocidade Vturb -->
-  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-  <link rel="preload" href="https://scripts.converteai.net/52188f2e-d8b9-4a35-b2c2-ea68f4126b97/ab-test/6a10fbda70a79c09bac9a8c1/player.js" as="script">
-  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-  <link rel="dns-prefetch" href="https://cdn.converteai.net">
-  <link rel="dns-prefetch" href="https://scripts.converteai.net">
-  <link rel="dns-prefetch" href="https://images.converteai.net">
-  <link rel="dns-prefetch" href="https://m3u8.vturb.net">
-  <link rel="dns-prefetch" href="https://license.vturb.com">
-
+  <!-- Meta Pixel Code -->
   <script>
-  window.pixelId = "6a1b7f741d5f9db5a8a5b018";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
- 
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '814643538108105');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=814643538108105&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
   
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #f5f5f5; font-family: 'Inter', sans-serif; padding: 20px; }
-    .container { max-width: 1000px; margin: 0 auto; }
-    .main-card { background: #ffffff; border-radius: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
-    .headline { background: #0d1f38; padding: 40px 40px 30px 40px; }
-    .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid #ffffff; padding-bottom: 15px; }
-    .nbc-brand { display: flex; align-items: center; gap: 12px; }
-    .nbc-symbol { width: 55px; display: inline-block; }
-    .nbc-symbol svg { width: 100%; height: auto; display: block; }
-    .nbc-text { font-size: 28px; font-weight: 800; letter-spacing: -1px; color: #ffffff; }
-    .watch-text { font-size: 18px; font-weight: 600; letter-spacing: 3px; color: #ffffff; }
-    .breaking-news { color: #ff8888; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px; text-transform: uppercase; }
-    .exclusive { color: #ff8888; font-size: 13px; font-weight: 600; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; }
-    .main-title { font-size: 42px; font-weight: 800; line-height: 1.2; color: #ffffff; margin-bottom: 25px; }
-    .clinical-text { font-size: 18px; line-height: 1.5; color: #dddddd; font-weight: 500; margin-top: 10px; }
-    .video-section { padding: 0 40px 40px 40px; background: #ffffff; }
-    .video-wrapper { background: #e8e8e8; border-radius: 8px; overflow: hidden; min-height: 400px; display: flex; align-items: center; justify-content: center; }
-    .footer { background: #ffffff; padding: 40px; border-top: 1px solid #ddd; }
-    .featured-title { text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #333; margin-bottom: 35px; }
-    .media-row { display: flex; justify-content: center; align-items: center; gap: 60px; margin-bottom: 40px; flex-wrap: wrap; }
-    .media-item { font-size: 22px; font-weight: 700; }
-    .fox { color: #003399; }
-    .abc { color: #0066cc; }
-    .cbs { color: #003399; }
-    .scientific-title { text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 3px; color: #333; margin: 40px 0 30px 0; }
-    .scientific-row { display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap; }
-    .scientific-item { text-align: center; }
-    .institution { font-weight: 700; font-size: 16px; color: #000; }
-    .sub { font-size: 11px; color: #555; margin-top: 5px; }
-    @media (max-width: 768px) {
-      body { padding: 10px; }
-      .headline { padding: 25px 20px; }
-      .main-title { font-size: 28px; }
-      .clinical-text { font-size: 15px; }
-      .video-section { padding: 0 20px 25px 20px; }
-      .footer { padding: 25px 20px; }
-      .media-row { gap: 30px; }
-      .media-item { font-size: 18px; }
-      .scientific-row { gap: 30px; }
-      .nbc-symbol { width: 45px; }
-      .nbc-text { font-size: 22px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      background: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .main-card {
+      background: #ffffff;
+      border-radius: 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* ============================================ */
+    /* HEADLINE - FUNDO AZUL ESCURO (#0d1f38) */
+    /* ============================================ */
+    .headline {
+      background: #0d1f38;
+      padding: 40px 40px 30px 40px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 15px;
+    }
+
+    /* Container do ícone + texto NBC NEWS */
+    .nbc-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Símbolo da NBC */
+    .nbc-symbol {
+      width: 55px;
+      display: inline-block;
+    }
+
+    .nbc-symbol svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Texto NBC NEWS ao lado do ícone */
+    .nbc-text {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #ffffff;
+    }
+
+    .watch-text {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: #ffffff;
+    }
+
+    .breaking-news {
+      color: #ff8888;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .exclusive {
+      color: #ff8888;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #ffffff;
+      margin-bottom: 25px;
+    }
+
+    /* ============================================ */
+    /* VÍDEO */
+    /* ============================================ */
+    .video-section {
+      padding: 0 40px 40px 40px;
+      background: #ffffff;
+    }
+
+    .video-wrapper {
+      background: #e8e8e8;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-placeholder {
+      text-align: center;
+      padding: 80px 40px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .video-placeholder-icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    .video-placeholder-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .video-placeholder-sub {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* ============================================ */
+    /* RESPONSIVO */
+    /* ============================================ */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .headline {
+        padding: 25px 20px;
+      }
+
+      .main-title {
+        font-size: 28px;
+      }
+
+      .video-section {
+        padding: 0 20px 25px 20px;
+      }
+
+      .video-placeholder {
+        padding: 50px 20px;
+      }
+
+      .nbc-symbol {
+        width: 45px;
+      }
+
+      .nbc-text {
+        font-size: 22px;
+      }
+    }
+
     @media (max-width: 480px) {
-      .main-title { font-size: 24px; }
-      .watch-text { font-size: 14px; }
-      .nbc-text { font-size: 18px; }
-      .nbc-symbol { width: 38px; }
-      .media-row { flex-direction: column; gap: 15px; }
-      .scientific-row { flex-direction: column; gap: 20px; }
+      .main-title {
+        font-size: 24px;
+      }
+
+      .watch-text {
+        font-size: 14px;
+      }
+
+      .nbc-text {
+        font-size: 18px;
+      }
+
+      .nbc-symbol {
+        width: 38px;
+      }
+
+      .video-placeholder-icon {
+        font-size: 48px;
+      }
+
+      .video-placeholder-text {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="main-card">
+
+      <!-- HEADLINE - FUNDO AZUL ESCURO COM ÍCONE + TEXTO NBC NEWS -->
       <div class="headline">
         <div class="top-bar">
           <div class="nbc-brand">
+            <!-- Símbolo da NBC -->
             <div class="nbc-symbol">
               <svg viewBox="0 0 370 345" xmlns="http://www.w3.org/2000/svg">
                 <path d="M180 260 L124 128 C114 101 136 68 162 68 C185 68 196 87 188 111 Z" fill="#f41245"/>
@@ -126,61 +251,32 @@
           </div>
           <span class="watch-text">WATCH</span>
         </div>
+        
         <div class="breaking-news">BREAKING NEWS</div>
         <div class="exclusive">EXCLUSIVE HEALTH INVESTIGATION</div>
+        
         <div class="main-title">
-          Leaked Harvard Protocol "Self-Repairs"<br>
-          Failing Eyes & Restores Perfect 20/20<br>
-          Vision
+          Dr. Ming Wang's protocol demonstrates "self-repair" in weakened eyes, restoring vision to millions of people.
         </div>
-        <div class="clinical-text">
-          In clinical trials, 21,000+ patients have gone from nearly blind<br>
-          to perfect 20/20 vision — and doctors are calling it the most<br>
-          significant breakthrough in eye health in the last 30 years.
-        </div>
+        
       </div>
 
-      <!-- VÍDEO COM TESTE A/B (botão já está dentro do player Vturb) -->
+      <!-- VÍDEO -->
       <div class="video-section">
         <div class="video-wrapper">
-          <vturb-smartplayer id="ab-6a10fbda70a79c09bac9a8c1" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
-          <script type="text/javascript">
-            var s=document.createElement("script");
-            s.src="https://scripts.converteai.net/52188f2e-d8b9-4a35-b2c2-ea68f4126b97/ab-test/6a10fbda70a79c09bac9a8c1/player.js";
-            s.async=!0;
-            document.head.appendChild(s);
-          </script>
+          <div class="video-placeholder" onclick="alert('📺 Aqui será inserido o vídeo. Substitua este bloco pelo código embed do YouTube ou Vimeo.')">
+            <div class="video-placeholder-icon">🎬</div>
+            <div class="video-placeholder-text">Espaço para o vídeo</div>
+            <div class="video-placeholder-sub">Clique para instruções</div>
+          </div>
         </div>
       </div>
 
-      <!-- FOOTER -->
-      <div class="footer">
-        <div class="featured-title">AS FEATURED IN</div>
-        <div class="media-row">
-          <span class="media-item fox">FOX NEWS</span>
-          <span class="media-item abc">abc NEWS</span>
-          <span class="media-item cbs">CBS</span>
-        </div>
-        <div class="scientific-title">Scientific References</div>
-        <div class="scientific-row">
-          <div class="scientific-item">
-            <div class="institution">MAYO CLINIC</div>
-            <div class="sub">HEALTH SYSTEM</div>
-          </div>
-          <div class="scientific-item">
-            <div class="institution">HARVARD</div>
-            <div class="sub">MEDICAL SCHOOL</div>
-          </div>
-          <div class="scientific-item">
-            <div class="institution">NIH</div>
-            <div class="sub">National Institute of Health</div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+
   <script>
-    console.log('%c✨ Site com Teste A/B Vturb - Botão está dentro do player ✨', 'color: #0d1f38; font-size: 14px;');
+    console.log('%c✨ Site atualizado: novo título, sem texto clínico e sem footer ✨', 'color: #0d1f38; font-size: 14px;');
   </script>
 </body>
 </html>
